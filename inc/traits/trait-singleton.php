@@ -14,7 +14,7 @@ trait Singleton {
 
     public function __clone()
     {
-        // anti-clone
+        // prevents object cloning
     }
 
     /**

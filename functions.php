@@ -5,6 +5,16 @@
  * @package Writer X
  */
 
+if (!defined('WRITER_X_DIR_PATH')) {
+    define('WRITER_X_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once WRITER_X_DIR_PATH.'/inc/helpers/autoloader';
+
+function writerXGetThemeInstance() {
+    \WriterXTheme\Inc\WriterXTheme::getInstance();
+}
+
 // Enqueue theme styles and scripts
 function writer_x_theme_enqueue_scripts()
 {
