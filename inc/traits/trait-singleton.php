@@ -4,7 +4,7 @@
  * @package Writer X
  */
 
-namespace Writing_Theme\Inc\Traits;
+namespace WritingTheme\Inc\Traits;
 
 trait Singleton {
     public function __construct()
@@ -30,7 +30,7 @@ trait Singleton {
         if (!isset($instance[ $calledClass ])) {
             $instance [ $calledClass ] = new $calledClass();
 
-            do_action(sprintf('writer_x_theme_singleton_init%s', $calledClass));
+            do_action(sprintf('writing_theme_singleton_init%s', $calledClass));
         }
 
         return $instance[ $calledClass ];

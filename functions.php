@@ -5,27 +5,21 @@
  * @package Writer X
  */
 
-if (!defined('WRITER_X_DIR_PATH')) {
-    define('WRITER_X_DIR_PATH', untrailingslashit(get_template_directory()));
+use WritingTheme\Inc\WritingTheme;
+
+if (!defined('WRITING_THEME_DIR_PATH')) {
+    define('WRITING_THEME_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
-require_once WRITER_X_DIR_PATH.'/inc/helpers/autoloader';
-
-function writerXGetThemeInstance() {
-    \WriterXTheme\Inc\WriterXTheme::getInstance();
+if (!defined('WRITING_THEME_DIR_URI')) {
+    define('WRITING_THEME_DIR_URI', untrailingslashit(get_template_directory_uri()));
 }
+// autoloader
+require_once 'inc/helpers/autoloader.php';
+// load theme instance
 
-// Enqueue theme styles and scripts
-function writer_x_theme_enqueue_scripts()
+function writingGetThemeInstance()
 {
-    // Enqueue main stylesheet
-    wp_enqueue_style('writer_x_theme_style', get_stylesheet_uri());
-
-    // Enqueue Bootstrap CSS
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(), '5.3.0', 'all');
-
-    // Enqueue Bootstrap JS
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array('jquery'), '5.3.0', true);
+    WritingTheme::getInstance();
 }
-
-add_action('wp_enqueue_scripts', 'writer_x_theme_enqueue_scripts');
+writingGetThemeInstance();

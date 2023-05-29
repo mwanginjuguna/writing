@@ -3,16 +3,15 @@
  * Autoloader file
  * @package Writer X
  */
-namespace Writing_Theme\Inc\Helpers\Autoloader;
+namespace WritingTheme\Inc\Helpers\Autoloader;
 
 /**
  * Autoloader function
  * @param
- * @return
  */
 function autoloader($resource = '') {
     $resource_path = false;
-    $namespace_root = 'WRITER_X_THEME\\';
+    $namespace_root = 'WritingTheme\\';
     $resource = trim($resource, '\\');
 
     if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
@@ -64,7 +63,7 @@ function autoloader($resource = '') {
                 break;
         }
 
-        $resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( WRITER_X_DIR_PATH ), $directory, $file_name );
+        $resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( WRITING_THEME_DIR_PATH ), $directory, $file_name );
 
     }
 
@@ -79,5 +78,5 @@ function autoloader($resource = '') {
     }
 
 }
-spl_autoload_register( '\AQUILA_THEME\Inc\Helpers\autoloader' );
 
+spl_autoload_register("WritingTheme\\Inc\\Helpers\\Autoloader\\autoloader");
