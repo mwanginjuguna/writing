@@ -3,7 +3,7 @@
  * Autoloader file
  * @package Writer X
  */
-namespace WritingTheme\Inc\Helpers\Autoloader;
+namespace WRITING_THEME\Inc\Helpers;
 
 /**
  * Autoloader function
@@ -11,7 +11,7 @@ namespace WritingTheme\Inc\Helpers\Autoloader;
  */
 function autoloader($resource = '') {
     $resource_path = false;
-    $namespace_root = 'WritingTheme\\';
+    $namespace_root = 'WRITING_THEME\\';
     $resource = trim($resource, '\\');
 
     if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
@@ -79,4 +79,4 @@ function autoloader($resource = '') {
 
 }
 
-spl_autoload_register("WritingTheme\\Inc\\Helpers\\Autoloader\\autoloader");
+spl_autoload_register("WRITING_THEME\\Inc\\Helpers\\autoloader");

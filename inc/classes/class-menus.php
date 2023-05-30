@@ -6,9 +6,9 @@
  * @package Writer X
  */
 
-namespace WritingTheme\Inc;
+namespace WRITING_THEME\Inc;
 
-use WritingTheme\Inc\Traits\Singleton;
+use WRITING_THEME\Inc\Traits\Singleton;
 
 class Menus
 {

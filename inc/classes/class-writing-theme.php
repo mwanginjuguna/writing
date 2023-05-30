@@ -2,11 +2,13 @@
 
 /**
  * Bootstraps the theme.
+ *
+ * @package Writer X
  */
 
-namespace WritingTheme\Inc;
+namespace WRITING_THEME\Inc;
 
-use WritingTheme\Inc\Traits\Singleton;
+use WRITING_THEME\Inc\Traits\Singleton;
 
 class WritingTheme
 {
@@ -15,7 +17,7 @@ class WritingTheme
     protected function __construct()
     {
         // load class
-        WritingThemeAssets::getInstance();
+        Assets::getInstance();
         Menus::getInstance();
         $this->setupHooks();
     }

@@ -4,7 +4,7 @@
  * @package Writer X
  */
 
-namespace WritingTheme\Inc\Traits;
+namespace WRITING_THEME\Inc\Traits;
 
 trait Singleton {
     public function __construct()
@@ -19,9 +19,8 @@ trait Singleton {
 
     /**
      * Ensure class is only instantiated once.
-     * @return mixed
      */
-    final public static function getInstance(): mixed
+    final public static function getInstance()
     {
         static $instance = [];
 
