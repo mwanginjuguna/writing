@@ -43,7 +43,7 @@ class WritingTheme
             'default-image' => '',
         ]);
 
-        add_theme_support('post-thumbnail');
+        add_theme_support('post-thumbnails');
 
         add_theme_support('customize-selective-refresh-widgets');
 
