@@ -19,6 +19,7 @@ class WritingTheme
         // load class
         Assets::getInstance();
         Menus::getInstance();
+        Meta_Boxes::getInstance();
         $this->setupHooks();
     }
 
