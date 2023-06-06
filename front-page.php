@@ -7,7 +7,7 @@
 
 get_header(); // Include header.php
 ?>
-
+<p class="my-5" id="total-container"></p>
 <main id="main-content" class="site-main">
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
