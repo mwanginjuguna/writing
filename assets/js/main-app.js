@@ -281,17 +281,27 @@ let saveToLocal = () => {
 
 function getPrice() {
     console.log("beginning of getPrice: ")
-    baseRate = rates.find(rate => rate.hours === form.deadline);
-    console.log(baseRate);
-    let total = baseRate.amount ?? 0;
-    levelRate = levels.find(level => level.id === form.academic_level_id).rate ?? 0;
-    serviceRate = services.find( service => service.id === form.service_type_id ).rate ?? 0;
+    console.log("form.deadline " + form.deadline) // logs 186
+
+    baseRate = rates.find(rate => rate.hours === parseInt(form.deadline));
+    console.log("baseRate: "+baseRate); // logs undefined
+
+    let total = parseInt(baseRate.amount) ?? 0;
+    console.log("Type of total: "+typeof(total));
+    console.log("Total: "+total);
+
+    levelRate = levels.find(level => level.id === parseInt(form.academic_level_id)).rate ?? 0;
+    console.log("levelRate: "+levelRate);
+
+    serviceRate = services.find( service => service.id === parseInt(form.service_type_id) ).rate ?? 0;
+    console.log("serviceRate: "+serviceRate);
+
     let rateTotal = total + total*(levelRate/100) + total*(serviceRate/100);
 
 
-    let slides = form.slides;
+    let slides = parseInt(form.slides);
 
-    total = (rateTotal * form.pages) + (rateTotal * slides);
+    total = (rateTotal * parseInt(form.pages)) + (rateTotal * slides);
 
     form.amount = (Math.round(total * 100)/ 100).toFixed(2);
 
@@ -300,12 +310,12 @@ function getPrice() {
 
 
 function setInits() {
-    form.service_type_id = jQuery('#service_type').val();
-    console.log('#service_type' + form.service_type_id);
+    form.service_type_id = parseInt(jQuery('#service_type').val());
+    console.log('# service_type' + form.service_type_id);
 
-    form.academic_level_id = jQuery('#academic_level').val();
-    form.deadline = jQuery('#deadline').val();
-    form.pages = jQuery('#pages').val();
+    form.academic_level_id = parseInt(jQuery('#academic_level').val());
+    form.deadline = parseInt(jQuery('#deadline').val());
+    form.pages = parseInt(jQuery('#pages').val());
 
     getPrice();
 }
@@ -314,6 +324,6 @@ function updatePrice() {
     jQuery(document).ready(function () {
         let newPrice = form.amount; // Set the new price value
 
-        $('#price').html(`<b>${newPrice}</b>`); // Update the text content of the element with ID "price"
+        jQuery('#price').html(`<b>${newPrice}</b>`); // Update the text content of the element with ID "price"
     });
 }

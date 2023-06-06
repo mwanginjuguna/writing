@@ -9,8 +9,7 @@ $assetClass = \WRITING_THEME\Inc\Assets::getInstance();
 wp_enqueue_script('writing-theme-main-js');
 ?>
 
-
-<section class="w-25 shadow rounded p-3">
+<section class="w-25 shadow rounded p-3" style="background-color: #F01851">
     <form action="" style="z-index: 3;">
         <p>Calculate Price</p>
 
@@ -87,8 +86,8 @@ wp_enqueue_script('writing-theme-main-js');
 
         <!--price-->
         <div class="mt-2">
-            <p class="text-sm text-gray-700 text-right p-1">
-                Price: $ <span id="price" class="px-1 underline underline-offset-4 font-bold italic text-lg text-purple-900">
+            <p class="p-1 font-bold text-end">
+                Price: $ <span id="price" class="px-1 italic text-decoration-underline">
                     <script>
                         jQuery(document).ready(() => {
                             setInits();
@@ -98,7 +97,7 @@ wp_enqueue_script('writing-theme-main-js');
             </p>
         </div>
 
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn border rounded-3 border-warning fw-bold" style="background-color: #F0E101;">
             Get Started >
         </button>
 
