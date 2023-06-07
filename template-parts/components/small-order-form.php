@@ -9,9 +9,11 @@ $assetClass = \WRITING_THEME\Inc\Assets::getInstance();
 wp_enqueue_script('writing-theme-main-js');
 ?>
 
-<section class="w-25 shadow rounded p-3" style="background-color: #F01851">
+<section class="d-grid mx-auto mt-lg-5 shadow rounded p-3" style="background-color: #6119FF; max-width: 20rem">
     <form action="" style="z-index: 3;">
-        <p>Calculate Price</p>
+        <p style="font-weight: bold; color: #19FFBA">Calculate Price</p>
+
+        <hr class="hr-separator pb-3"/>
 
         <!--Service Types-->
         <div class="mt-2">
@@ -27,11 +29,8 @@ wp_enqueue_script('writing-theme-main-js');
             </select>
         </div>
 
-        <div id="levelAndDeadlineHelp" class="form-text">
-            Select an appropriate nature and deadline for your task.
-        </div>
-
-        <div class="row row-cols-2">
+        <!--Levels-->
+        <div class="row mt-4 row-cols-2">
             <!--Academic Level-->
             <div class="col mt-2">
                 <select onchange="setInits()" id="academic_level" name="academic_level" class="form-select form-select-sm" aria-label="Select task nature">
@@ -66,7 +65,7 @@ wp_enqueue_script('writing-theme-main-js');
         </div>
 
         <!--Pages-->
-        <div class="mt-2">
+        <div class="mt-4">
 
             <select onchange="setInits()" id="pages" name="pages"  class="form-select form-select-sm">
                 <option selected value="2">2 Pages / 550 words</option>
@@ -85,9 +84,9 @@ wp_enqueue_script('writing-theme-main-js');
         </div>
 
         <!--price-->
-        <div class="mt-2">
-            <p class="p-1 font-bold text-end">
-                Price: $ <span id="price" class="px-1 italic text-decoration-underline">
+        <div class="mt-4">
+            <p class="p-1 font-bold text-end text-white">
+                Price: $<span id="price" class="px-1 italic text-decoration-underline">
                     <script>
                         jQuery(document).ready(() => {
                             setInits();
@@ -97,9 +96,12 @@ wp_enqueue_script('writing-theme-main-js');
             </p>
         </div>
 
-        <button type="submit" class="btn border rounded-3 border-warning fw-bold" style="background-color: #F0E101;">
-            Get Started >
-        </button>
+        <a href="/orders/new" class="btn my-auto border rounded-3 border-warning fs-5 fw-medium" style="background-color: yellow; color: #B30936">
+            Get Started
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+            </svg>
+        </a>
 
     </form>
 
