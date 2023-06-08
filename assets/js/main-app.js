@@ -298,16 +298,15 @@ function getPrice() {
 
     let rateTotal = total + total*(levelRate/100) + total*(serviceRate/100);
 
+    console.log('rateTotal - type: '+ typeof(rateTotal))
 
     let slides = parseInt(form.slides);
 
     total = (rateTotal * parseInt(form.pages)) + (rateTotal * slides);
 
     form.amount = (Math.round(total * 100)/ 100).toFixed(2);
-
-    updatePrice();
+    console.log("amount in getPrice: "+ form.amount)
 }
-
 
 function setInits() {
     form.service_type_id = parseInt(jQuery('#service_type').val());
@@ -318,12 +317,21 @@ function setInits() {
     form.pages = parseInt(jQuery('#pages').val());
 
     getPrice();
+
+    (function ($) {
+        let newPrice = form.amount; // Set the new price value
+        console.log('price in lastline in setInits(): ' + newPrice);
+
+        document.getElementById('price').innerHTML = newPrice;
+        // $( '#price' ).text(newPrice); // Update the text content of the element with ID "price"
+}) (jQuery)
 }
 
 function updatePrice() {
     jQuery(document).ready(function () {
         let newPrice = form.amount; // Set the new price value
+        console.log('price in updatePrice(): '+ newPrice);
 
-        jQuery('#price').html(`<b>${newPrice}</b>`); // Update the text content of the element with ID "price"
+        jQuery("#amount").html(`<b>${newPrice}</b>`); // Update the text content of the element with ID "price"
     });
 }

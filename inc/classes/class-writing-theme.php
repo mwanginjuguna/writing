@@ -20,6 +20,8 @@ class WritingTheme
         Assets::getInstance();
         Menus::getInstance();
         Meta_Boxes::getInstance();
+        Sidebars::getInstance();
+        Order_Form_Widget::getInstance();
         $this->setupHooks();
     }
 

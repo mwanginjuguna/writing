@@ -9,8 +9,8 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <?php if (is_active_sidebar('sidebar-widget')) : ?>
-                    <?php dynamic_sidebar('sidebar-widget'); ?>
+                <?php if (is_active_sidebar('sidebar-1')) : ?>
+                    <?php dynamic_sidebar('sidebar-1'); ?>
                 <?php else : ?>
                     <!-- Default sidebar content -->
                     <h5 class="card-title">Sidebar</h5>
