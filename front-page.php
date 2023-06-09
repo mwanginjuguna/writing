@@ -309,26 +309,26 @@ get_header(); // Include header.php
     </section>
 
     <!--FAQs-->
-    <section class="bg-primary">
+    <section class="bg-light-subtle">
         <div class="container" style="padding-bottom: 4rem; padding-top: 4rem;">
             <div class="d-grid align-content-center mx-auto pb-5 w-50">
-                <h2 class="pt-4 text-white text-center fw-bolder display-3">
+                <h2 class="pt-4 text-center fw-bolder display-3" style="color: #6119FF">
                     Frequently Asked Questions
                 </h2>
-                <p class="text-center text-white-50 fs-4">Answers to the most burning questions.</p>
+                <p class="text-center text-black-50 fs-4">Answers to the most burning questions.</p>
             </div>
 
             <div class="row gx-4 px-4">
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mt-4 pb-4 text-white">What kind of writing assistance does your service provide?</h4>
+                <div class="col-lg-6 pb-5 border-start">
+                    <h4 class="mt-4 pb-4 text-primary-emphasis">What kind of writing assistance does your service provide?</h4>
 
                     <p class="mt-2 mx-4 p-3 px-4 text-dark rounded-3 fs-5 lh-sm"  style="background-color: #19FFBA;">
                         Our service offers a wide range of writing assistance, including essay writing, research paper writing, article writing, blog post writing, and more. We have a team of skilled writers who can handle various subjects and academic levels.
                     </p>
                 </div>
 
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mt-4 pb-4 text-white">Do you provide programming assistance for specific programming languages?</h4>
+                <div class="col-lg-6 pb-5 border-start">
+                    <h4 class="mt-4 pb-4 text-primary-emphasis">Do you provide programming assistance for specific programming languages?</h4>
 
                     <p class="mt-2 mx-4 p-3 px-4 text-dark rounded-3 fs-5 lh-sm" style="background-color: #19FFBA;">
 
@@ -336,32 +336,32 @@ get_header(); // Include header.php
                     </p>
                 </div>
 
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mt-4 pb-4 text-white">Can you help with data analysis for business purposes?</h4>
+                <div class="col-lg-6 pb-5 border-start">
+                    <h4 class="mt-4 pb-4 text-primary-emphasis">Can you help with data analysis for business purposes?</h4>
 
                     <p class="mt-2 mx-4 p-3 px-4 text-dark rounded-3 fs-5 lh-sm" style="background-color: #19FFBA;">
                         Absolutely! We specialize in data analysis for businesses. Our team of data analysts is experienced in handling complex data sets, performing statistical analysis, creating visualizations, and providing actionable insights to help businesses make informed decisions.
                     </p>
                 </div>
 
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mt-4 pb-4 text-white">How can I place an order for your services?</h4>
+                <div class="col-lg-6 pb-5 border-start">
+                    <h4 class="mt-4 pb-4 text-primary-emphasis">How can I place an order for your services?</h4>
 
                     <p class="mt-2 mx-4 p-3 px-4 text-dark rounded-3 fs-5 lh-sm" style="background-color: #19FFBA;">
                         Placing an order is simple. You can visit our website and fill out the order form, providing details about the type of assistance you need. Once we receive your request, we will review it and assign the most suitable writer, analyst, or programmer to work on your project.
                     </p>
                 </div>
 
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mt-4 pb-4 text-white">Can I communicate with the assigned professional during the project?</h4>
+                <div class="col-lg-6 pb-5 border-start">
+                    <h4 class="mt-4 pb-4 text-primary-emphasis">Can I communicate with the assigned professional during the project?</h4>
 
                     <p class="mt-2 mx-4 p-3 px-4 text-dark rounded-3 fs-5 lh-sm"  style="background-color: #19FFBA;">
                         Yes, we encourage communication between our clients and the assigned professionals. We provide a messaging system on our platform that allows you to directly communicate with the writer, data analyst, or programmer working on your project. This ensures a smooth and collaborative process.
                     </p>
                 </div>
 
-                <div class="col-lg-6 pb-5">
-                    <h4 class="mt-4 pb-4 text-white">What measures do you have in place to ensure the originality and confidentiality of the work?</h4>
+                <div class="col-lg-6 pb-5 border-start">
+                    <h4 class="mt-4 pb-4 text-primary-emphasis">What measures do you have in place to ensure the originality and confidentiality of the work?</h4>
 
                     <p class="mt-2 mx-4 p-3 px-4 text-dark rounded-3 fs-5 lh-sm" style="background-color: #19FFBA;">
                         We take originality and confidentiality seriously. All the work we deliver is completely original and tailored to your specific requirements. We have strict policies against plagiarism, and our writers, analysts, and programmers follow rigorous research and citation practices. Regarding confidentiality, we have robust systems and protocols in place to safeguard your personal and project-related information. Your privacy is of utmost importance to us.

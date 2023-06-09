@@ -275,9 +275,6 @@ let serviceRate = 0.00;
 
 console.log('rates[3]: '+rates[3].amount);
 
-let saveToLocal = () => {
-    window.location.href='/orders/new';
-}
 
 function getPrice() {
     console.log("beginning of getPrice: ")
@@ -334,4 +331,11 @@ function updatePrice() {
 
         jQuery("#amount").html(`<b>${newPrice}</b>`); // Update the text content of the element with ID "price"
     });
+}
+
+// save subform's order to localStorage before redirecting to the full order form
+function saveSubForm() {
+    setInits();
+    localStorage.setItem('newOrder', JSON.stringify(form));
+    window.location.href='/orders/new';
 }
