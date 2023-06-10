@@ -85,10 +85,12 @@ class Assets
         wp_register_script('service-types-json', WRITING_THEME_DIR_URI.'/assets/json_files/service-types.json', array(), $version, true);
 
         // register scripts
+        wp_register_script('popper-js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '1.14.7', true);
         wp_register_script('bootstrap-js', WRITING_THEME_DIR_URI . '/assets/bootstrap/js/bootstrap.min.js', array('jquery'), '5.3.0', true);
         wp_register_script('writing-theme-main-js', WRITING_THEME_DIR_URI.'/assets/js/main-app.js', array('jquery', 'pricing-json', 'subjects-json', 'line-spacings-json', 'referencing-styles-json', 'currencies-json', 'task-levels-json', 'service-types-json'), $version, true);
 
         // enqueue script
+        wp_enqueue_script('popper-js');
         wp_enqueue_script('bootstrap-js');
         wp_enqueue_script('writing-theme-main-js');
     }
